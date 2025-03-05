@@ -20,6 +20,8 @@ class CRUDView(viewsets.ModelViewSet):
     """
     serializer_class = CRUD_serializer
     permission_classes = [permissions.IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['status', 'due_date']
 
     def get_queryset(self):
         """
