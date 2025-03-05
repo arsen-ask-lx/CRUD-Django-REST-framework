@@ -1,0 +1,53 @@
+# --- Игнорируем виртуальное окружение ---
+venv/
+env/
+test_venv/
+
+# --- Кешированные файлы Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+
+# --- Конфигурации окружения (ключи, пароли, настройки БД) ---
+.env
+*.env
+*.local
+
+# --- Логи и временные файлы ---
+*.log
+*.pot
+*.pyc
+.DS_Store
+Thumbs.db
+
+# --- Файлы IDE и редакторов кода ---
+.vscode/
+.idea/
+*.iml
+
+# --- Игнорируем миграции (если не хотим их коммитить, но лучше не игнорировать) ---
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+# migrations/  # <-- если хочешь игнорировать миграции полностью (не рекомендуется)
+
+# --- pgAdmin (если используешь) ---
+pgadmin4.log
+pgadmin4.db
+
+# --- Docker (если используешь) ---
+docker-compose.override.yml
+
+# --- Статика и медиафайлы (если они генерируются автоматически) ---
+static/
+media/
+
+# --- Node.js файлы (если есть фронтенд внутри Django) ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Разное (если используешь какие-то кастомные файлы) ---
+celerybeat-schedule
